@@ -1,0 +1,37 @@
+﻿<Window x:Class="ChaosTxtBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChaosTxtBuilder"
+        mc:Ignorable="d"
+        Title="混乱文本生成器 - v0.0.1" Height="460" Width="820"  Visibility="Visible" ResizeMode="CanMinimize" AllowDrop="True" WindowStyle="ThreeDBorderWindow" FontSize="14" >
+    <Grid>
+        <TextBox Margin="25,10,374,111"
+            x:Name="tb1"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Visible"  FontSize="16" Text="这里输入文本" TextWrapping="Wrap"/>
+        <TextBox Margin="470,10,24,111"
+            IsReadOnly="True"
+            Name="tb2"
+            TextWrapping="Wrap"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Visible" FontSize="16">
+        </TextBox>
+        <TextBlock Margin="25,339,454,32" FontSize="16" Name="label1">
+            混乱等级: 5 / 10
+        </TextBlock>
+        <Slider ValueChanged="SliderChange" IsSnapToTickEnabled="True"
+            x:Name="slider1" Margin="25,379,169,18" ScrollViewer.HorizontalScrollBarVisibility="Visible" Value="5" SmallChange="1" >
+            
+        </Slider>
+        <StackPanel Margin="650,351,24,9">
+            <Button Click="GoButtonClick">
+                Go!
+            </Button>
+            <Button Padding="1" Margin="0,11,0,0" Click="CopyButtonClick">
+                Copy
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
